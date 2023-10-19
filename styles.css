@@ -1,0 +1,166 @@
+:root {
+  --branco-principal: #ffffff;
+  --cinza-secundario: #c0c0c0;
+  --botao-azul: #167bf7;
+  --botao-azul-hover: #3c92fa;
+  --cor-de-fundo: #00030c;
+
+  --fonte-principal: "Inter";
+}
+
+body {
+  background-color: var(--cor-de-fundo);
+  color: var(--branco-principal);
+  font-family: var(--fonte-principal);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* define estilo para todos os elementos DESTE arquivo */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.principal {
+  background-image: url("img/Background.png");
+  /* evita que a imagem fique se repetindo que nem doida quando der zoom out */
+  background-repeat: no-repeat;
+  /* faz a imagem pegar o tamanho total da section em que está? */
+  background-size: contain;
+
+  /* faz a div ficar ao meio da tela, no caso, bota uma margin em cima da div p deixar ela ao meio da tela */
+  align-items: center;
+
+  text-align: center;
+}
+
+.container {
+  height: 100vh;
+  /* NOVO */
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+  background-color: var(--botao-azul);
+  border-radius: 5px;
+  padding: 1em;
+  color: var(--branco-principal);
+  display: block;
+  text-decoration: none;
+
+  /* separa os botões um pouquinho, descola */
+  margin-bottom: 1em;
+}
+
+.botao__secundario {
+  background-color: transparent;
+  border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+  font-size: 12px;
+  color: var(--cinza-secundario);
+}
+
+.container__titulo {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.container__imagem {
+  /* dois em em baixo um em em cima */
+  margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+  /* coloca a div com os textos e botões descolada do canto esquerdo, mais à direita */
+  margin: 0 6em;
+}
+
+.secundario__imagem {
+  width: 80%;
+}
+
+.secundario {
+  align-items: center;
+
+  /* 0 de margin para cima e para baixo, e 6 de margin para os lados */
+  margin: 0 6em;
+}
+
+.descricao__titulo {
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--branco-principal);
+  margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+  color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+  /* Permite ter outros elementos ao lado, ao mesmo tempo que pega só o espacinho do texto dele. Sem esse atributo, o botão ocuparia até a imagem. Com o atributo, o botão só ocupa o espaço do texto de dentro dele, e permite a imagem estar ao lado! */
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.container__descricao {
+  padding: 2em;
+}
+
+.dispositivos__lista {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 5em 0;
+}
+
+.dispositivos {
+  text-align: center;
+}
+
+.dispositivos__titulo {
+  font-size: 48px;
+  color: var(--branco-principal);
+}
+
+.lista__item {
+  font-size: 32px;
+  color: var(--branco-principal);
+}
+
+.rodape {
+  text-align: center;
+  margin: 5em 3em;
+}
+
+.rodape__lista {
+  justify-content: center;
+  display: flex;
+  list-style: none;
+  margin-top: 1em;
+}
+
+.lista__link a {
+  text-decoration: none;
+  margin-left: 1em;
+  color: var(--branco-principal);
+}
+
+.lista__link a:hover {
+  color: var(--botao-azul);
+}
+
+.rodape__texto {
+  font-size: 14px;
+  color: var(--cinza-secundario);
+  margin: 1em 0;
+}
+
+.container__botao:hover {
+  background-color: var(--botao-azul-hover);
+  color: var(--cor-de-fundo);
+}
